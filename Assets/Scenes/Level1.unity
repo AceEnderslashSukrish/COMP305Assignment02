@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &36621383 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8611621882508175943, guid: 3f103000734973547ba53651419eb096, type: 3}
-  m_PrefabInstance: {fileID: 8611621882473457152}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &195401752
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,37 +259,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5017142682848508182, guid: 4414fbad92d8bd24f8ea653261fe7bc6, type: 3}
   m_PrefabInstance: {fileID: 5017142683079669152}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &624502723
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 624502724}
-  m_Layer: 0
-  m_Name: GroundCheck
-  m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &624502724
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 624502723}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: -0.94, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 36621383}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &726683587
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,26 +802,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5147010575890807232, guid: 3f103000734973547ba53651419eb096, type: 3}
-      propertyPath: JumpForce
-      value: 800
-      objectReference: {fileID: 0}
-    - target: {fileID: 5147010575890807232, guid: 3f103000734973547ba53651419eb096, type: 3}
-      propertyPath: Posgroundcheck
-      value: 
-      objectReference: {fileID: 624502724}
     - target: {fileID: 8611621882508175939, guid: 3f103000734973547ba53651419eb096, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 8611621882508175940, guid: 3f103000734973547ba53651419eb096, type: 3}
-      propertyPath: m_GravityScale
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8611621882508175941, guid: 3f103000734973547ba53651419eb096, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: d7696b7ba0364d84ca852eae811bb309, type: 2}
     - target: {fileID: 8611621882508175943, guid: 3f103000734973547ba53651419eb096, type: 3}
       propertyPath: m_RootOrder
       value: 2
