@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class FallingPlatform : MonoBehaviour
 {
-    private float fallDelay = 1f;
+    [SerializeField] private float fallDelay = 1f;
     private float destroyDelay = 2f;
 
-    [SerializeField] private Rigidbody2D rb;
+    private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = rb.GetComponent<SpriteRenderer>();
+    }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -19,6 +26,8 @@ public class FallingPlatform : MonoBehaviour
 
     private IEnumerator Fall()
     {
+        yield return new WaitForSeconds(fallDelay * 0.75f);
+        spriteRenderer.color = Color.red;
         yield return new WaitForSeconds(fallDelay);
         rb.bodyType = RigidbodyType2D.Dynamic;
         Destroy(gameObject, destroyDelay);
