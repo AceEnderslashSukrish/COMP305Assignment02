@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform Posgroundcheck;
     [SerializeField] private LayerMask GroundLayer;
     [SerializeField] private float JumpForce = 800.0f;
+    private bool facingRight = true;
     private Rigidbody2D gBody;
     // Start is called before the first frame update
     void Start()
@@ -27,10 +28,26 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = false;
         }
 
+        if (facingRight == false && hrz > 0)
+        {
+            flip();
+        } else if(facingRight == true && hrz < 0)
+        {
+            flip();
+        }
+
         gBody.velocity = new Vector2(hrz * speed, gBody.velocity.y);
     }
     private bool GroundCheck()
     {
         return Physics2D.OverlapCircle(Posgroundcheck.position, groundRadius, GroundLayer);
+    }
+
+    void flip()
+    {
+        facingRight = !facingRight;
+        Vector3 scaler = transform.localScale;
+        scaler.x *= -1;
+        transform.localScale = scaler;
     }
 }
