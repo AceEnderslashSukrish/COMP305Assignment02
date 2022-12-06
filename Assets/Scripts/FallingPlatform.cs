@@ -28,7 +28,7 @@ public class FallingPlatform : MonoBehaviour
     {
         yield return new WaitForSeconds(fallDelay * 0.75f);
         spriteRenderer.color = Color.red;
-        yield return new WaitForSeconds(fallDelay);
+        yield return new WaitForSeconds(fallDelay * 0.25f);
         rb.bodyType = RigidbodyType2D.Dynamic;
         Destroy(gameObject, destroyDelay);
     }
